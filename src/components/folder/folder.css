@@ -1,0 +1,38 @@
+.folderItems {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: inherit;
+
+    .folderItem {
+        color: var(--bs-grey);
+        width: fit-content;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .folderName {
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .folderImg {
+
+            /* width: 100px;
+            height: 80px; */
+            i {
+                font-size: var(--ts-h1);
+            }
+
+            margin-bottom: 1rem;
+            /* background-image: url(../../assets/imgs/image.png);
+            background-size: ;
+            background-position: 0;
+            background-repeat: no-repeat; */
+        }
+    }
+}
