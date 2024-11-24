@@ -8,8 +8,8 @@ const Folders = ({ items }) => {
     return (
         <div className="folderItems">
         {items.map((item) => (
-                    <Draggable>
-                    <div className="folder folderItem" key={item.id}>
+                    <Draggable key={item.id}>
+                    <div className="folder folderItem">
                         <div className="folderContnt folderImg">
                             <i className="far fa-folder"></i>
                         </div>

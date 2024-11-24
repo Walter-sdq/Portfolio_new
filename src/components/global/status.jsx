@@ -39,11 +39,15 @@ const Status = () => {
                             :
                             <i className="far fa-bell-slash " title='Allow notification' ></i>}</div>
 
-                        <div className='battery ' title='Battery Status'><i className="batt fas fa-battery-full"></i><span> (100%)</span>  </div>
+                        <div className='battery ' title='Battery Status'>
+                            <i className="batt fas fa-battery-full"></i><span> (100%)</span> 
+                             </div>
 
-                        <div className='volume ' onClick={toggleVolume}>{volume
+                        <div className='volume ' onClick={toggleVolume}>
+                            {volume
                             ? <i className="fas fa-volume-high" title='Mute'></i>
-                            : <i className="fas fa-volume-xmark" title='Allow sound'></i>}</div>
+                            : <i className="fas fa-volume-xmark" title='Allow sound'></i>}
+                            </div>
 
                         <div className='clock time' title='Time'><Time /></div>
 

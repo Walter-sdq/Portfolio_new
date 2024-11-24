@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     max-height: inherit;
 
+    .react-draggable-dragging {
+        cursor: grabbing;
+    }
+
     .folderItem {
         color: var(--bs-grey);
         width: fit-content;
@@ -14,6 +18,8 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+
+
 
         .folderName {
             text-align: center;
