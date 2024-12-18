@@ -1,95 +1,47 @@
 {
-  "folders": [
-    {
-      "id": 1,
-      "name": "Projects",
-      "contents": [
+    "folders": [
         {
-          "id": 101,
-          "name": "file1.txt",
-          "type": "file",
-          "path": "/files/file1.txt"
+            "id": 1,
+            "name": "Projects",
+            "contents": [
+                { "id": 101, "name": "Project1", "type": "folder", "contents": [] },
+                { "id": 102, "name": "Resume.pdf", "type": "file", "path": "/files/Resume.pdf" }
+            ]
         },
         {
-          "id": 102,
-          "name": "file2.png",
-          "type": "file",
-          "path": "/files/file2.png"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "resume",
-      "contents": [
-        {
-          "id": 201,
-          "name": "resume.pdf",
-          "type": "file",
-          "path": "/files/resume.pdf"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "fun",
-      "contents": [
-        {
-          "id": 301,
-          "name": "funny_video.mp4",
-          "type": "file",
-          "path": "https://example.com/funny_video.mp4"
+            "id": 2,
+            "name": "Docs",
+            "contents": [
+                { "id": 201, "name": "Notes.txt", "type": "file", "path": "https://example.com/Notes.txt" },
+                { "id": 202, "name": "Photos", "type": "folder", "contents": [] }
+            ]
         },
         {
-          "id": 302,
-          "name": "jokes.txt",
-          "type": "file",
-          "path": "/files/jokes.txt"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "hubby",
-      "contents": [
+            "id": 3,
+            "name": "Fun",
+            "contents": [
+                { "id": 301, "name": "Funny Video", "type": "file", "path": "https://example.com/funny_video.mp4" },
+                { "id": 302, "name": "jokes.txt", "type": "file", "path": "/files/jokes.txt" }
+            ]
+        },
         {
-          "id": 401,
-          "name": "hubby_photo.jpg",
-          "type": "file",
-          "path": "/files/hubby_photo.jpg"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "old",
-      "contents": [
+            "id": 4,
+            "name": "Hubby",
+            "contents": [
+                { "id": 401, "name": "image.png", "type": "file", "path": "/src/assets/imgs/image.png" }
+            ]
+        },
         {
-          "id": 501,
-          "name": "old_notes.txt",
-          "type": "file",
-          "path": "/files/old_notes.txt"
+            "id": 5,
+            "name": "Old",
+            "contents": []
         }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Resume",
-      "contents": [
+    ],
+    "files": [
         {
-          "id": 601,
-          "name": "latest_resume.pdf",
-          "type": "file",
-          "path": "/files/latest_resume.pdf"
+            "id": 1,
+            "name": "about me",
+            "content": ""
         }
-      ]
-    }
-  ],
-  "files": [
-    {
-      "id": 1,
-      "name": "about me",
-      "content": "I am a software developer with a passion for creating innovative solutions."
-    }
-  ]
+    ]
 }

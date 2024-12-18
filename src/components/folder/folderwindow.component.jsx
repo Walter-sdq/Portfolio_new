@@ -1,5 +1,5 @@
 import Draggable from 'react-draggable';
-import './FolderWindow.css'; // Add custom styles for your window
+import './folder.css';
 
 const FolderWindow = ({ folder, onClose }) => {
     return (

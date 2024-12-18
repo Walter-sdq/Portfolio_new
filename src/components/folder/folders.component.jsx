@@ -1,23 +1,29 @@
-// import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import './folder.css'
-import '../../assets/imgs/image.png'
+import './folder.css';
+import '../../assets/imgs/image.png';
 import Draggable from 'react-draggable';
+import { useEffect } from 'react';
 
-const Folders = ({ items }) => {
+const Folders = ({ items, onFolderOpen }) => {
+    useEffect(() => {
+        console.log(items);
+    }, [items]);
 
     return (
         <div className="folderItems">
-        {items.map((item) => (
-                    <Draggable key={item.id}>
-                    <div className="folder folderItem">
+            {items.map((item) => (
+                <Draggable key={item.id}>
+                    <div
+                        className="folder folderItem"
+                        onDoubleClick={() => onFolderOpen(item)} // Pass folder data here
+                    >
                         <div className="folderContnt folderImg">
                             <i className="far fa-folder"></i>
                         </div>
                         <p className="folderName">{item.name}</p>
-                    </div >
-                    </Draggable>
-                ))}
-            </div>
+                    </div>
+                </Draggable>
+            ))}
+        </div>
     );
 }
 
