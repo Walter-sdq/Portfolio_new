@@ -1,21 +1,18 @@
 import Time from "../global/indicators/useTime.component";
-import "./global.css";
 import Power from "./indicators/power";
 import Volume from "./indicators/volume";
 import Battery from "./indicators/battery";
-import Notification from "./indicators/notification";
 import Network from "../global/indicators/netSignal";
+import Notification from "./indicators/notification";
+import "./global.css";
+import Menu from "./menu/menu";
 
 const Status = () => {
-
   return (
     <div className="status">
       <div className="status-padd">
         <div className="status-main">
-          <div className="nav menu btn">
-            <i className="fab fa-ubuntu"></i>
-            <p>menu</p>
-          </div>
+          <><Menu/></>
           <div className="indicators statsInfo">
             <div className=""></div>
 

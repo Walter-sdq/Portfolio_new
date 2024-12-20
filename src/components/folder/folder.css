@@ -1,44 +1,97 @@
 .folderItems {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: inherit;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: inherit;
 
-    .react-draggable-dragging {
-        cursor: grabbing;
+  .react-draggable-dragging {
+    cursor: grabbing;
+  }
+
+  .folderItem {
+    color: var(--bs-grey);
+    width: fit-content;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .folderName {
+      text-align: center;
+      text-transform: capitalize;
     }
 
-    .folderItem {
-        color: var(--bs-grey);
-        width: fit-content;
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-
-
-
-        .folderName {
-            text-align: center;
-            text-transform: capitalize;
-        }
-
-        .folderImg {
-
-            /* width: 100px;
+    .folderImg {
+      /* width: 100px;
             height: 80px; */
-            i {
-                font-size: var(--ts-h1);
-            }
+      i {
+        font-size: var(--ts-h1);
+      }
 
-            margin-bottom: 1rem;
-            /* background-image: url(../../assets/imgs/image.png);
+      margin-bottom: 1rem;
+      /* background-image: url(../../assets/imgs/image.png);
             background-size: ;
             background-position: 0;
             background-repeat: no-repeat; */
-        }
     }
+  }
+}
+.folder-window {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  color: var(--bs-grey);
+  background-color: rgb(37, 35, 35);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* transform: translate(-50%, 0%); */
+  left: 39%;
+  top: 30%;
+
+  .folder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bs-black);
+    padding: 5px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+    .button {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--bs-llblack);
+      color: var(--bs-white);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--ts-p11);
+    }
+  }
+  .folder-contents {
+    padding: 10px;
+    overflow-y: auto;
+
+    .folder-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px;
+      
+      .subfolder,
+      .file {
+      text-align: center;
+      }
+      .subfolder i,
+      .file i {
+        margin-bottom: 10px;
+        font-size: var(--ts-h1);
+      }
+    }
+  }
 }

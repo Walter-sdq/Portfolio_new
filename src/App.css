@@ -2,19 +2,23 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  /* transition:cubic-bezier(0.39, 0.575, 0.565, 1) .5s */
 }
 
 :root {
-  --bs-dblue: #071434;
-  --bs-lblack: #2E3436;
-  --bs-black:#181818;
-  --bs-blue: #3734A9;
-  --bs-green: #4CB050;
-  --bs-lblue: #00DEED;
-  --bs-ubuntu: #DD4814;
-  --bs-orange: #FF805D;
-  --bs-grey: #AFB6C0;
-  --bs-white: #e0e0e0;
+  --bs-dblue:  #071434;
+  --bs-black:  #181818;
+  --bs-lblack: #2e3436;
+  --bs-llblack:#3d3a3a;
+
+  --bs-blue:   #3734a9;
+  --bs-green:  #4cb050;
+  --bs-lblue:  #00deed;
+  --bs-ubuntu: #dd4814;
+  --bs-orange: #ff805d;
+
+  --bs-grey:   #afb6c0;
+  --bs-white:  #e0e0e0;
   --ts-h1: 40px;
   --ts-h2: 32px;
   --ts-h3: 28px;
@@ -29,6 +33,10 @@
   --ts-p6: 17px;
   --ts-p7: 16px;
   --ts-p8: 15px;
+  --ts-p9: 14px;
+  --ts-p10: 13px;
+  --ts-p11: 12px;
+  --ts-p12: 11px;
   --tw8: 800;
   --tw7: 700;
   --tw6: 600;
@@ -44,6 +52,17 @@
   height: 100%;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(270deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(130deg);
+  }
+}
 
 /* .App {
   text-align: center;

@@ -1,0 +1,11 @@
+.menuPop,.powerPop{
+    position: absolute;
+    top: 36px;
+    z-index: 9999;
+}
+.menuPop{
+left: 0;
+}
+.powerPop{
+    right: 0;
+}

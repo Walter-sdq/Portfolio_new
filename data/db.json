@@ -1,47 +1,72 @@
 {
-    "folders": [
+  "folders": [
+    {
+      "id": 1,
+      "name": "Projects",
+      "contents": [
+        { "id": 101, "name": "Project1", "type": "folder", "contents": [] },
         {
-            "id": 1,
-            "name": "Projects",
-            "contents": [
-                { "id": 101, "name": "Project1", "type": "folder", "contents": [] },
-                { "id": 102, "name": "Resume.pdf", "type": "file", "path": "/files/Resume.pdf" }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Docs",
-            "contents": [
-                { "id": 201, "name": "Notes.txt", "type": "file", "path": "https://example.com/Notes.txt" },
-                { "id": 202, "name": "Photos", "type": "folder", "contents": [] }
-            ]
-        },
-        {
-            "id": 3,
-            "name": "Fun",
-            "contents": [
-                { "id": 301, "name": "Funny Video", "type": "file", "path": "https://example.com/funny_video.mp4" },
-                { "id": 302, "name": "jokes.txt", "type": "file", "path": "/files/jokes.txt" }
-            ]
-        },
-        {
-            "id": 4,
-            "name": "Hubby",
-            "contents": [
-                { "id": 401, "name": "image.png", "type": "file", "path": "/src/assets/imgs/image.png" }
-            ]
-        },
-        {
-            "id": 5,
-            "name": "Old",
-            "contents": []
+          "id": 102,
+          "name": "Resume.pdf",
+          "type": "file",
+          "path": "/files/Resume.pdf"
         }
-    ],
-    "files": [
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Docs",
+      "contents": [
         {
-            "id": 1,
-            "name": "about me",
-            "content": ""
+          "id": 201,
+          "name": "Notes.txt",
+          "type": "file",
+          "path": "https://example.com/Notes.txt"
+        },
+        { "id": 202, "name": "Photos", "type": "folder", "contents": [] }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Fun",
+      "contents": [
+        {
+          "id": 301,
+          "name": "Funny Video",
+          "type": "file",
+          "path": "https://example.com/funny_video.mp4"
+        },
+        {
+          "id": 302,
+          "name": "jokes.txt",
+          "type": "file",
+          "path": "/files/jokes.txt"
         }
-    ]
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Hubby",
+      "contents": [
+        {
+          "id": 401,
+          "name": "image.png",
+          "type": "file",
+          "path": "/src/assets/imgs/image.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Old",
+      "contents": []
+    }
+  ],
+  "files": [
+    {
+      "id": 1,
+      "name": "about me",
+      "content": ""
+    }
+  ]
 }
