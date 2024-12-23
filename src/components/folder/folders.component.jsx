@@ -4,9 +4,7 @@ import Draggable from "react-draggable";
 import { useEffect } from "react";
 
 const Folders = ({ items, onFolderOpen }) => {
-  useEffect(() => {
-    console.log(items);
-  }, [items]);
+  useEffect(() => {  }, [items]);
 
   return (
     <div className="folderItems">

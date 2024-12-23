@@ -4,12 +4,25 @@
       "id": 1,
       "name": "Projects",
       "contents": [
-        { "id": 101, "name": "Project1", "type": "folder", "contents": [] },
+        {
+          "id": 101,
+          "name": "Project1",
+          "path": "",
+          "type": "folder",
+          "contents": [
+            {
+              "id": "a",
+              "name": "bla.pdf",
+              "type": "file",
+              "path": "./files/f.mp3"
+            }
+          ]
+        },
         {
           "id": 102,
           "name": "Resume.pdf",
           "type": "file",
-          "path": "/files/Resume.pdf"
+          "path": "/files/cv.pdf"
         }
       ]
     },
@@ -21,7 +34,7 @@
           "id": 201,
           "name": "Notes.txt",
           "type": "file",
-          "path": "https://example.com/Notes.txt"
+          "path": "/files/Notes.txt"
         },
         { "id": 202, "name": "Photos", "type": "folder", "contents": [] }
       ]
@@ -34,7 +47,7 @@
           "id": 301,
           "name": "Funny Video",
           "type": "file",
-          "path": "https://example.com/funny_video.mp4"
+          "path": "/files/funny_video.mp4"
         },
         {
           "id": 302,
@@ -52,7 +65,7 @@
           "id": 401,
           "name": "image.png",
           "type": "file",
-          "path": "/src/assets/imgs/image.png"
+          "path": "./src/assets/imgs/image.png"
         }
       ]
     },

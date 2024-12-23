@@ -14,6 +14,11 @@ const Container = () => {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/src/assets/imgs/image.png">
+            
+          </Route>  <Route exact path="/files/cv.pdf">
+            
+          </Route>
           <Route path="*">
             <NotFound />
           </Route>
