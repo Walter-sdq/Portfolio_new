@@ -15,12 +15,12 @@ const Home = (props) => {
   const [openFolders, setOpenFolders] = useState([]); // State for opened folder windows
 
   // Function to handle opening a folder window on double-click
-  const handleFolderOpen = (folder) => {
-    // Check if the folder is already open
-    if (!openFolders.some((f) => f.id === folder.id)) {
-      setOpenFolders((prevFolders) => [...prevFolders, folder]);
-    }
-  };
+ const handleFolderOpen = (folder) => {
+  if (!openFolders.some((f) => f.id === folder.id)) {
+    setOpenFolders((prevFolders) => [...prevFolders, folder]);
+  }
+};
+
 
   // Function to close a folder window
   const handleFolderClose = (folderId) => {
