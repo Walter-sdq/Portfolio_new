@@ -10,17 +10,16 @@ const Home = (props) => {
     data: items,
     loading,
     err,
-  } = useFetch("http://localhost:8000/folders");
+  } = useFetch("https://drive.google.com/file/d/1Rh4YKZtKHoEv6VE1XvV-sBLjnl7Lu2vo/view?usp=drive_link/folders");
 
   const [openFolders, setOpenFolders] = useState([]); // State for opened folder windows
 
   // Function to handle opening a folder window on double-click
- const handleFolderOpen = (folder) => {
-  if (!openFolders.some((f) => f.id === folder.id)) {
-    setOpenFolders((prevFolders) => [...prevFolders, folder]);
-  }
-};
-
+  const handleFolderOpen = (folder) => {
+    if (!openFolders.some((f) => f.id === folder.id)) {
+      setOpenFolders((prevFolders) => [...prevFolders, folder]);
+    }
+  };
 
   // Function to close a folder window
   const handleFolderClose = (folderId) => {

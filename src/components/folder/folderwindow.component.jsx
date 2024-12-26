@@ -17,12 +17,12 @@
 //     } else if (file.type === "folder") {
 //       // window.open(folder.path, "_blank");
 //       console.log(folder.id);
-      
+
 //       console.log(folder);
 //     }
 
 //     console.log(file,folder);
-    
+
 //   };
 
 //   // const handleFolderOpen = (folder) => {
@@ -79,8 +79,6 @@
 // };
 
 // export default FolderWindow;
-
-
 
 import Draggable from "react-draggable";
 import { useState } from "react";
