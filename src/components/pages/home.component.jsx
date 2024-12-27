@@ -10,7 +10,7 @@ const Home = (props) => {
     data: items,
     loading,
     err,
-  } = useFetch("https://drive.google.com/file/d/1Rh4YKZtKHoEv6VE1XvV-sBLjnl7Lu2vo/view?usp=drive_link/folders");
+  } = useFetch("https://walter-sdq.github.io/db/db.json?folder");
 
   const [openFolders, setOpenFolders] = useState([]); // State for opened folder windows
 
