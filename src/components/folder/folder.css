@@ -11,7 +11,7 @@
 
   .folderItem {
     color: var(--bs-grey);
-    width: fit-content;
+    width: 60px;
     height: 80px;
     display: flex;
     flex-direction: column;

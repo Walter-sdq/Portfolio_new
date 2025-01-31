@@ -27,11 +27,6 @@
 
 // export default Folders;
 
-
-
-
-
-
 import React, { useEffect } from "react";
 import Draggable from "react-draggable";
 import "./folder.css";
