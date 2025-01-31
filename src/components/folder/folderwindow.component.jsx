@@ -84,10 +84,27 @@ import Draggable from "react-draggable";
 import { useState } from "react";
 import "./folder.css";
 
+/**
+ * Renders a draggable folder window component that displays the contents of a folder
+ * and allows navigation through subfolders.
+ *
+ * @param {Object} props - The component props.
+ * @param {Object} props.folder - The root folder object to display.
+ * @param {string} props.folder.name - The name of the folder.
+ * @param {Array} props.folder.contents - An array of file and subfolder objects in the folder.
+ * @param {Function} props.onClose - Callback function to close the folder window.
+ * @returns {JSX.Element} A draggable div containing the folder window UI.
+ */
 const FolderWindow = ({ folder, onClose }) => {
   const [currentFolder, setCurrentFolder] = useState(folder); // Track the current folder
 
-  // Handle opening a file or folder
+  /**
+   * Handles opening a file or navigating into a subfolder.
+   *
+   * @param {Object} item - The file or folder item to open.
+   * @param {string} item.type - The type of the item ('file' or 'folder').
+   * @param {string} item.path - The path of the file (for files only).
+   */
   const handleContentOpen = (item) => {
     if (item.type === "file") {
       // Open file in a new tab
@@ -98,7 +115,9 @@ const FolderWindow = ({ folder, onClose }) => {
     }
   };
 
-  // Handle navigating back to the parent folder
+  /**
+   * Handles navigating back to the parent folder.
+   */
   const handleBack = () => {
     if (currentFolder !== folder) {
       const parentFolder = findParentFolder(folder, currentFolder.id);
@@ -106,7 +125,13 @@ const FolderWindow = ({ folder, onClose }) => {
     }
   };
 
-  // Recursive function to find the parent folder
+  /**
+   * Recursively finds the parent folder of a given folder ID.
+   *
+   * @param {Object} root - The root folder to start the search from.
+   * @param {string} id - The ID of the folder to find the parent for.
+   * @returns {Object|null} The parent folder object if found, null otherwise.
+   */
   const findParentFolder = (root, id) => {
     for (const item of root.contents) {
       if (item.id === id) return root;
