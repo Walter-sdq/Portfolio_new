@@ -33,7 +33,7 @@ const Home = (props) => {
       <Status />
       <div className="homePaddn">
         <div className="homeMain">
-          {err && <div>{err}</div>}
+          {err && <div className="err">{err}</div>}
 
           {loading && (
             <div className="loading">

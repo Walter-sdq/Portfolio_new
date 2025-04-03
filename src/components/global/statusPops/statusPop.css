@@ -1,11 +1,60 @@
-.menuPop,.powerPop{
-    position: absolute;
-    top: 36px;
-    z-index: 9999;
+.menuPop,
+.powerPop {
+  position: absolute;
+  top: 36px;
+  z-index: 9999;
+  padding: 5px;
 }
-.menuPop{
-left: 0;
+.menuPop {
+  left: 0;
+  width: 30%;
+  background-color: var(--bs-lblack);
+  height: 450px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  .popPadd {
+    width: 100%;
+    height: 100%;
+
+    .popCont {
+      width: inherit;
+      height: inherit;
+      .search {
+        width: 100%;
+        height: 35px;
+        border-radius: 5px;
+        stroke: black;
+      }
+      .menuApps {
+        height: inherit;
+
+        .sides {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          z-index: -10;
+
+          .left {
+            width: 45%;
+            height: 100%;
+          }
+          .right {
+            width: 55%;
+            height: 100%;
+            overflow: auto;
+            border-top-left-radius: 10px;
+            background-color: var(--bs-llblack);
+            border-bottom-left-radius: 10px;
+          }
+        }
+      }
+    }
+  }
 }
-.powerPop{
-    right: 0;
+.powerPop {
+  right: 0;
 }

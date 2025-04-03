@@ -18,6 +18,9 @@ animation: spin infinite 1.5s;
   }
 }
 
+.err{
+  color: var(--bs-grey);
+}
 .notfound {
   width: 100%;
   height: 100%;
