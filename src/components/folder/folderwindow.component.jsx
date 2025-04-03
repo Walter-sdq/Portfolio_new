@@ -99,6 +99,19 @@ const FolderWindow = ({ folder, onClose }) => {
   const [currentFolder, setCurrentFolder] = useState(folder); // Track the current folder
 
   /**
+   * make folderwindow come up of other window
+   */
+  let style = {};
+  const goTop = (e) => {
+    console.log(e);
+    style = {
+      zIndex: 1100,
+    };
+    console.log(style);
+    
+  };
+
+  /**
    * Handles opening a file or navigating into a subfolder.
    *
    * @param {Object} item - The file or folder item to open.
@@ -145,7 +158,7 @@ const FolderWindow = ({ folder, onClose }) => {
 
   return (
     <Draggable>
-      <div className="folder-window">
+      <div className="folder-window" style={style} onClick={goTop}>
         <div className="folder-header">
           <h3>{currentFolder.name}</h3>
           <span className="button" onClick={onClose}>
