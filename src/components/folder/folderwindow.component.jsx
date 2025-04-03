@@ -101,14 +101,13 @@ const FolderWindow = ({ folder, onClose }) => {
   /**
    * make folderwindow come up of other window
    */
-  let style = {};
+  const [style, setStyle] = useState({});
   const goTop = (e) => {
     console.log(e);
-    style = {
+    setStyle({
       zIndex: 1100,
-    };
+    });
     console.log(style);
-    
   };
 
   /**
