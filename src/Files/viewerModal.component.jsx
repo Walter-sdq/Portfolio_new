@@ -2,7 +2,7 @@ import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import ReactPlayer from 'react-player';
-import { MonacoEditor } from '@monaco-editor/react';
+import MonacoEditor from '@monaco-editor/react';
 
 const ViewerModal = ({ content, onClose }) => {
   if (!content) return null;
@@ -15,7 +15,11 @@ const ViewerModal = ({ content, onClose }) => {
       <div className="viewer-body">
         {/* Text Files */}
         {content.type === 'txt' && (
-          <iframe src={content.path} title="Text Viewer" style={{ width: '100%', height: '100%' }} />
+          <iframe
+            src={content.path}
+            title={`Text Viewer - ${content.path}`} // Ensure unique and descriptive title
+            style={{ width: '100%', height: '100%' }}
+          />
         )}
 
         {/* PDF Files */}
@@ -27,12 +31,24 @@ const ViewerModal = ({ content, onClose }) => {
 
         {/* Images */}
         {['png', 'jpg', 'jpeg', 'gif'].includes(content.type) && (
-          <img src={content.path} alt="Image Viewer" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+          <img
+            src={content.path}
+            alt={`Image Viewer - ${content.path}`} // Ensure alt text is descriptive
+            style={{ maxWidth: '100%', maxHeight: '100%' }}
+          />
         )}
 
         {/* Videos */}
         {content.type === 'video' && (
-          <ReactPlayer url={content.path} controls width="100%" height="100%" />
+          <ReactPlayer
+            url={content.path}
+            controls
+            width="100%"
+            height="100%"
+            config={{
+              file: { attributes: { controlsList: 'nodownload' } }, // Optional: Prevent downloads
+            }}
+          />
         )}
 
         {/* Audio */}
@@ -48,7 +64,7 @@ const ViewerModal = ({ content, onClose }) => {
           <MonacoEditor
             height="90vh"
             defaultLanguage={content.type}
-            defaultValue={content.code || ''}
+            defaultValue={content.code || ''} // Fallback for undefined content.code
             options={{ readOnly: true }}
           />
         )}

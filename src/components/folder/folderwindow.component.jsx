@@ -26,16 +26,20 @@ const FolderWindow = ({ folder, onClose }) => {
 
   const handleBack = () => {
     if (currentFolder !== folder) {
-      const parentFolder = findParentFolder(folder, currentFolder.id);
-      setCurrentFolder(parentFolder);
+      const parentFolder = findParentFolder(folder, currentFolder);
+      if (parentFolder) {
+        setCurrentFolder(parentFolder);
+      }
     }
   };
 
-  const findParentFolder = (root, id) => {
+  const findParentFolder = (root, targetFolder) => {
+    if (!root.contents) return null;
+
     for (const item of root.contents) {
-      if (item.id === id) return root;
+      if (item === targetFolder) return root;
       if (item.type === "folder") {
-        const found = findParentFolder(item, id);
+        const found = findParentFolder(item, targetFolder);
         if (found) return found;
       }
     }
