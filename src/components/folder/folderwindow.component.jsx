@@ -9,15 +9,21 @@ const FolderWindow = ({ folder, onClose }) => {
   const [selectedFile, setSelectedFile] = useState(null); // Track the selected file for modal
 
   const goTop = (e) => {
+    console.log(e);
+    
     setStyle({
       zIndex: 1100,
     });
   };
 
   const handleContentOpen = (item) => {
+    console.log("Opening item:", item); // Debug the item being opened
+    // Check if the item is a file or folder
     if (item.type === "file") {
       // Open file in the ViewerModal
       setSelectedFile(item);
+      console.log(item);
+      
     } else if (item.type === "folder") {
       // Navigate into the subfolder
       setCurrentFolder(item);

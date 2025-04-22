@@ -13,7 +13,7 @@
               "id": "a",
               "name": "bla.pdf",
               "type": "file",
-              "path": "./files/bla.pdf"
+              "path": "/files/bla.pdf"
             }
           ]
         },
@@ -21,7 +21,7 @@
           "id": 102,
           "name": "Resume.pdf",
           "type": "file",
-          "path": "./files/cv.pdf"
+          "path": "/files/cv.pdf"
         }
       ]
     },
@@ -33,7 +33,7 @@
           "id": 201,
           "name": "Notes.txt",
           "type": "file",
-          "path": "./files/Notes.txt"
+          "path": "/files/Notes.txt"
         },
         {
           "id": 202,
@@ -51,13 +51,13 @@
           "id": 301,
           "name": "Funny Video",
           "type": "file",
-          "path": "./files/funny_video.mp4"
+          "path": "/files/funny_video.mp4"
         },
         {
           "id": 302,
           "name": "jokes.txt",
           "type": "file",
-          "path": "./files/jokes.txt"
+          "path": "/files/jokes.txt"
         }
       ]
     },
@@ -69,7 +69,7 @@
           "id": 401,
           "name": "image.png",
           "type": "file",
-          "path": "./assets/imgs/image.png"
+          "path": "/files/image.png"
         }
       ]
     },

@@ -3,6 +3,7 @@ import "./container.css";
 import "../pages/pages.css";
 import Home from "../pages/home.component";
 import NotFound from "../pages/404.component";
+import Test from "../test";
 
 const Container = () => {
   return (
@@ -14,10 +15,9 @@ const Container = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/src/assets/imgs/image.png">
-            
-          </Route>  <Route exact path="/files/cv.pdf">
-            
+          <Route exact path="/src/assets/imgs/image.png"></Route>{" "}
+          <Route exact path="/test">
+            <Test />
           </Route>
           <Route path="*">
             <NotFound />
