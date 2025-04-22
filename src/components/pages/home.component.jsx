@@ -1,18 +1,24 @@
-import { useState } from "react";
-import useFetch from "../ext-hooks/useFetch.hook";
+import { useState, useEffect } from "react";
+import { jsonData } from "../../utils/data"; // Corrected path to data.js
 import Folders from "../folder/folders.component";
 import Plank from "../global/plank";
 import Status from "../global/status";
 import FolderWindow from "../folder/folderwindow.component";
 
 const Home = (props) => {
-  const {
-    data: items,
-    loading,
-    err,
-  } = useFetch("http://localhost:8000/folders");
-
+  const [items, setItems] = useState(null); // State for folder items
+  const [loading, setLoading] = useState(true); // Loading state
   const [openFolders, setOpenFolders] = useState([]); // State for opened folder windows
+
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setItems(jsonData.folders); // Set folders after delay
+      setLoading(false); // Stop loading
+    }, 2000); // 2 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup timeout on unmount
+  }, []);
 
   // Function to handle opening a folder window on double-click
   const handleFolderOpen = (folder) => {
@@ -33,18 +39,14 @@ const Home = (props) => {
       <Status />
       <div className="homePaddn">
         <div className="homeMain">
-          {err && <div className="err">{err}</div>}
-
-          {loading && (
+          {loading ? (
             <div className="loading">
-              Loading Items{" "}
+              Loading folders{" "}
               <span className="loadIco">
                 <i className="fab fa-ubuntu"></i>
               </span>
             </div>
-          )}
-
-          {items && (
+          ) : (
             <Folders
               items={items}
               itemType="folder"
